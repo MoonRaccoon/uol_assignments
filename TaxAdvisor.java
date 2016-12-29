@@ -39,9 +39,7 @@ public class TaxAdvisor {
     }
 
     static boolean positiveAnswer(String answer) {
-        return ((answer.equals("yes")) ||
-                (answer.equals("yeah")) ||
-                (answer.equals("y")));
+        return (answer.charAt(0) == 'y');
     }
 
     static void calculateAllowance() {
@@ -98,7 +96,7 @@ public class TaxAdvisor {
 
         System.out.println("Your salary is " + salary);
         System.out.println("Your tax allowance is " + allowance);
-        System.out.println("You owe " + basicTax + " in the first tax band (20% tax) "
+        System.out.println("You owe " +  basicTax + " in the first tax band (20% tax) "
                 + "paid on taxable income up to 43,000");
         System.out.println("You owe " + higherTax + " in the second tax band (40% tax) "
                 + "paid on taxable income above to 43,000 and up to 150,000");
