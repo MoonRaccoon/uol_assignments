@@ -31,6 +31,47 @@ public class PartA {
 		print(star3);
 		print("");
 	}
+
+   static String censor(String str) {
+        String returnString = "";
+
+        for(int i = 0; i < str.length(); i++) {
+            returnString += "*";
+        }
+
+        return returnString;
+    }
+
+   static void print(String str) {
+       System.out.println(str);
+   }
+
+   static String magic8Ball() {
+       Random generator = new Random();
+       return answers[generator.nextInt(answers.length)];
+   }
+
+   static String[] drawStars(int w, int l) {
+       String[] starsArray = new String[l];
+       String starsWidth = "";
+
+       for(int n = 0; n < w; n++) {
+               starsWidth += "*";
+           }
+
+       for(int i = 0; i < l; i++) {
+           starsArray[i] = starsWidth;
+       }
+
+       return starsArray;
+   }
+
+   static void print(String[] s) {
+       for(int k = 0; k < s.length; k++) {
+           System.out.println(s[k]);
+       }
+   }
+
 }
 
 
