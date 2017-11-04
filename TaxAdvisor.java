@@ -1,4 +1,8 @@
+// Name: Shamoun Syed
+// Student Number: 140313701
+
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class TaxAdvisor {
 
@@ -12,6 +16,7 @@ public class TaxAdvisor {
     static double higherTax;
     static double additionalTax;
     static double totalTax;
+    static DecimalFormat f = new DecimalFormat("0.##");
 
     public static void main(String[] args) {
         breakdown();
@@ -94,15 +99,15 @@ public class TaxAdvisor {
         calculateAdditionalTax();
         totalTax = basicTax + higherTax + additionalTax;
 
-        System.out.println("Your salary is " + salary);
-        System.out.println("Your tax allowance is " + allowance);
-        System.out.println("You owe " +  basicTax + " in the first tax band (20% tax) "
+        System.out.println("Your salary is " + f.format(salary));
+        System.out.println("Your tax allowance is " + f.format(allowance));
+        System.out.println("You owe " +  f.format(basicTax) + " in the first tax band (20% tax) "
                 + "paid on taxable income up to 43,000");
-        System.out.println("You owe " + higherTax + " in the second tax band (40% tax) "
+        System.out.println("You owe " + f.format(higherTax) + " in the second tax band (40% tax) "
                 + "paid on taxable income above to 43,000 and up to 150,000");
-        System.out.println("You owe " + additionalTax + " in the third tax band (45% tax) "
+        System.out.println("You owe " + f.format(additionalTax) + " in the third tax band (45% tax) "
                 + "paid on taxable income over 150,000");
-        System.out.println("Total tax owed on your salary = " + totalTax);
+        System.out.println("Total tax owed on your salary = " + f.format(totalTax));
 
     }
 

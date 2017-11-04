@@ -1,3 +1,6 @@
+// Name: Shamoun Syed
+// Student Number: 140313701
+
 import java.util.Random;
 
 public class PartA {
@@ -18,6 +21,10 @@ public class PartA {
 			String m8ball1 = magic8Ball();
 			print(m8ball1);
 		}
+        /* This for loop appears to iterate a sufficiently high number of times in order to demonstrate the
+         * randomness of the magic8ball() method. There is a good chance of each possibility appearing at least once,
+         * and without any specific order.
+         * */
 		print("");
 
 		String[] star1 = drawStars(10, 3);
